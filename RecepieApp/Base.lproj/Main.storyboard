@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,44 +18,66 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Khg-Q6-0ai">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                                <rect key="frame" x="0.0" y="-4" width="393" height="818"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recepieCell" rowHeight="180" id="Ren-fO-0wS" customClass="RecepieCell" customModule="RecepieApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="180"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recepieCell" rowHeight="150" id="Ren-fO-0wS" customClass="RecepieCell" customModule="RecepieApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ren-fO-0wS" id="Jxp-Yb-drP">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="180"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recepiePlaceholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="xSe-20-iea">
-                                                    <rect key="frame" x="0.0" y="0.0" width="148" height="180"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="152" id="Ofm-3Q-3qu"/>
-                                                        <constraint firstAttribute="width" constant="148" id="kbh-2f-dET"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is some recepie title with good amount of text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiY-ja-Aq4">
-                                                    <rect key="frame" x="160" y="11" width="213" height="40.666666666666664"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Dinner" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiY-ja-Aq4">
+                                                    <rect key="frame" x="168" y="10.999999999999998" width="156.33333333333337" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHr-0r-mdI">
+                                                    <rect key="frame" x="168" y="43.333333333333336" width="213" height="20.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYa-i9-0ZT">
+                                                    <rect key="frame" x="336.33333333333331" y="3.3333333333333321" width="50.666666666666686" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="2sr-Tr-tr8"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain">
+                                                        <imageReference key="image" image="heart.fill" catalog="system" symbolScale="large"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="recepiePlaceholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="xSe-20-iea">
+                                                    <rect key="frame" x="6" y="0.0" width="150" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="150" id="Ofm-3Q-3qu"/>
+                                                        <constraint firstAttribute="width" constant="150" id="kbh-2f-dET"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="xSe-20-iea" firstAttribute="top" secondItem="Jxp-Yb-drP" secondAttribute="top" id="1V6-6g-9yE"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="qiY-ja-Aq4" secondAttribute="trailing" id="J1T-K6-0pV"/>
-                                                <constraint firstItem="xSe-20-iea" firstAttribute="leading" secondItem="Jxp-Yb-drP" secondAttribute="leading" id="MHr-Xh-h7i"/>
-                                                <constraint firstAttribute="bottom" secondItem="xSe-20-iea" secondAttribute="bottom" id="a9L-2k-dTr"/>
+                                                <constraint firstItem="xSe-20-iea" firstAttribute="top" secondItem="Jxp-Yb-drP" secondAttribute="top" id="3Te-5M-FH1"/>
+                                                <constraint firstItem="UHr-0r-mdI" firstAttribute="top" secondItem="qiY-ja-Aq4" secondAttribute="bottom" constant="12" id="5ds-zL-1aa"/>
+                                                <constraint firstAttribute="trailing" secondItem="UHr-0r-mdI" secondAttribute="trailing" constant="12" id="6zy-l0-pgH"/>
+                                                <constraint firstItem="yYa-i9-0ZT" firstAttribute="centerY" secondItem="qiY-ja-Aq4" secondAttribute="centerY" id="BeW-7h-0pa"/>
+                                                <constraint firstItem="xSe-20-iea" firstAttribute="leading" secondItem="Jxp-Yb-drP" secondAttribute="leading" constant="6" id="MHr-Xh-h7i"/>
+                                                <constraint firstItem="yYa-i9-0ZT" firstAttribute="leading" secondItem="qiY-ja-Aq4" secondAttribute="trailing" constant="12" id="Q42-WE-25k"/>
+                                                <constraint firstAttribute="trailing" secondItem="yYa-i9-0ZT" secondAttribute="trailing" constant="6" id="Y40-xC-4aU"/>
                                                 <constraint firstItem="qiY-ja-Aq4" firstAttribute="top" secondItem="Jxp-Yb-drP" secondAttribute="topMargin" id="n8j-Dc-xxe"/>
+                                                <constraint firstItem="UHr-0r-mdI" firstAttribute="leading" secondItem="xSe-20-iea" secondAttribute="trailing" constant="12" id="oRI-Fd-bm1"/>
                                                 <constraint firstItem="xSe-20-iea" firstAttribute="centerY" secondItem="Jxp-Yb-drP" secondAttribute="centerY" id="q9M-iO-SLG"/>
                                                 <constraint firstItem="qiY-ja-Aq4" firstAttribute="leading" secondItem="xSe-20-iea" secondAttribute="trailing" constant="12" id="v13-u7-dBV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="recepieImage" destination="xSe-20-iea" id="d7G-Ag-ewq"/>
-                                            <outlet property="recepieName" destination="qiY-ja-Aq4" id="MFr-jZ-g9j"/>
+                                            <outlet property="recepieName" destination="UHr-0r-mdI" id="Lph-AM-So0"/>
+                                            <outlet property="recepieType" destination="qiY-ja-Aq4" id="xYl-eg-z8W"/>
+                                            <segue destination="NJf-Jh-YVi" kind="show" id="ioc-fz-oDH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -72,11 +95,82 @@
             </objects>
             <point key="canvasLocation" x="1066.4122137404579" y="-2.1126760563380285"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="jzF-qA-Je1">
+            <objects>
+                <viewController id="NJf-Jh-YVi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DZn-b0-YRJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raspberry Banana Smoothie" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCB-og-XO6">
+                                <rect key="frame" x="6" y="103" width="393" height="88.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lk9-eo-0yG">
+                                <rect key="frame" x="6" y="203.33333333333331" width="381" height="142.33333333333331"/>
+                                <string key="text">Is a refreshing blend of ripe bananas, frozen raspberries, and a choice of mineral water or low-fat yogurt. It can be sweetened with a tablespoon of honey and made chilled with ice cubes. Blend until smooth and pour into glasses, optionally garnishing with fresh berries or mint leaves. Enjoy this invigorating and delicious smoothie!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vfF-f6-cRX">
+                                <rect key="frame" x="6" y="357.66666666666669" width="381" height="101.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingridients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUn-vW-O7B">
+                                        <rect key="frame" x="0.0" y="0.0" width="381" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3s-A3-f5N">
+                                        <rect key="frame" x="0.0" y="20.333333333333314" width="381" height="81.333333333333329"/>
+                                        <string key="text">1 ripe banana
+1 cup frozen raspberries
+1 cup mineral water or low-fat yogurt
+1 tablespoon honey (optional)</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ymH-fC-3Vw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iCB-og-XO6" firstAttribute="leading" secondItem="ymH-fC-3Vw" secondAttribute="leading" constant="6" id="68J-1K-DHr"/>
+                            <constraint firstItem="Lk9-eo-0yG" firstAttribute="top" secondItem="iCB-og-XO6" secondAttribute="bottom" constant="12" id="92f-XT-6Zs"/>
+                            <constraint firstItem="ymH-fC-3Vw" firstAttribute="trailing" secondItem="Lk9-eo-0yG" secondAttribute="trailing" constant="6" id="Hcs-gE-OuK"/>
+                            <constraint firstItem="vfF-f6-cRX" firstAttribute="top" secondItem="Lk9-eo-0yG" secondAttribute="bottom" constant="12" id="Lsu-fU-hvy"/>
+                            <constraint firstItem="vfF-f6-cRX" firstAttribute="leading" secondItem="ymH-fC-3Vw" secondAttribute="leading" constant="6" id="Xq5-t8-xUj"/>
+                            <constraint firstItem="iCB-og-XO6" firstAttribute="top" secondItem="ymH-fC-3Vw" secondAttribute="top" id="aOl-0k-Jrz"/>
+                            <constraint firstItem="iCB-og-XO6" firstAttribute="trailing" secondItem="ymH-fC-3Vw" secondAttribute="trailing" constant="6" id="bhJ-JP-56H"/>
+                            <constraint firstItem="Lk9-eo-0yG" firstAttribute="leading" secondItem="ymH-fC-3Vw" secondAttribute="leading" constant="6" id="gbl-gO-ctc"/>
+                            <constraint firstItem="ymH-fC-3Vw" firstAttribute="trailing" secondItem="vfF-f6-cRX" secondAttribute="trailing" constant="6" id="jQ5-Y3-A2N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oIO-0I-rxa"/>
+                </viewController>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingridients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="huk-5q-1W1">
+                    <rect key="frame" x="0.0" y="0.0" width="369" height="20.333333333333332"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYt-o1-PkV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1919.8473282442746" y="6.3380281690140849"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="nfU-56-Yhp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="smY-W4-0lm" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MH0-Jw-IgM">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -92,6 +186,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="recepiePlaceholderImage" width="1768" height="1768"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -7,8 +7,17 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITabBarDelegate, UITableViewDataSource, UITableViewDelegate {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//       Get the new view controller.
+//       if let imageVC = segue.destination as? ImageViewController {
+//          let image = getImageForSelectedRow()
+//          imageVC.currentImage = image
+//       }
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +25,15 @@ class HomeViewController: UIViewController, UITabBarDelegate, UITableViewDataSou
         title = "Lets go Chef!"
         tableView.delegate = self
         tableView.dataSource = self
+        
+        Network.shared.getRandomRecepies { result in
+            switch result {
+            case .success(let recepies):
+                print(recepies.recipes.count, recepies)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     
@@ -24,9 +42,9 @@ class HomeViewController: UIViewController, UITabBarDelegate, UITableViewDataSou
             print("Cell can not converted to RecepieCell")
             return UITableViewCell()
         }
-        print("Here")
         cell.recepieImage.image = UIImage(named: "recepiePlaceholderImage")
         cell.recepieName.text = "Tasty Recepie"
+        cell.recepieType.text = "Dinner"
         return cell
     }
     
