@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum URLError: String {
+enum URLError: Error {
     case invalidURL
 }
 

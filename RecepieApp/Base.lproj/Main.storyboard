@@ -77,7 +77,7 @@
                                             <outlet property="recepieImage" destination="xSe-20-iea" id="d7G-Ag-ewq"/>
                                             <outlet property="recepieName" destination="UHr-0r-mdI" id="Lph-AM-So0"/>
                                             <outlet property="recepieType" destination="qiY-ja-Aq4" id="xYl-eg-z8W"/>
-                                            <segue destination="NJf-Jh-YVi" kind="show" id="ioc-fz-oDH"/>
+                                            <segue destination="NJf-Jh-YVi" kind="show" id="TpE-jN-s7L"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="1066.4122137404579" y="-2.1126760563380285"/>
         </scene>
-        <!--View Controller-->
+        <!--Recepie View Controller-->
         <scene sceneID="jzF-qA-Je1">
             <objects>
-                <viewController id="NJf-Jh-YVi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecipieViewController" id="NJf-Jh-YVi" customClass="RecepieViewController" customModule="RecepieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DZn-b0-YRJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -153,6 +153,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oIO-0I-rxa"/>
+                    <connections>
+                        <outlet property="ingridients" destination="i3s-A3-f5N" id="uO4-r8-ANV"/>
+                        <outlet property="recipieDescription" destination="Lk9-eo-0yG" id="83K-Cq-mK7"/>
+                        <outlet property="recipieName" destination="iCB-og-XO6" id="7ei-hi-qUh"/>
+                    </connections>
                 </viewController>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingridients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="huk-5q-1W1">
                     <rect key="frame" x="0.0" y="0.0" width="369" height="20.333333333333332"/>
@@ -174,6 +179,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MH0-Jw-IgM">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

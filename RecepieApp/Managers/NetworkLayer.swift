@@ -4,17 +4,16 @@
 //
 //  Created by Hitesh Suthar on 25/09/23.
 //
+import Alamofire
 import Foundation
 class Network {
     private let APIKEY = "efa7fdea98b04835bab08e9ba40ac1f6"
     private let resultSize = 10
-    private init() {
-        
-    }
+    let decoder = JSONDecoder()
+    private init() {}
     static let shared = Network()
     
     func getRandomRecepies(completion: @escaping (Result<Recipices, Error>) -> ())  -> () {
-        
         // 'Result' is an Enum of Type <SuccessType, Error>
         // The type result escapes the function not the parameter name
         
@@ -24,24 +23,45 @@ class Network {
         
         let url = URL(string: "https://api.spoonacular.com/recipes/random?number=\(resultSize)")
         if let url = url {
-            var request = URLRequest(url: url,timeoutInterval: 10)
-            request.setValue(APIKEY, forHTTPHeaderField: "x-api-key")
-            let task = URLSession.shared.dataTask(with: request) { data, URLResponse, error in
-                let decoder = JSONDecoder()
-                guard let data = data else {
+            AF.request(url, method: .get, headers: HTTPHeaders(["x-api-key": APIKEY])).responseData { response in
+                debugPrint("Request status code:", response.response?.statusCode as? Int ?? 0)
+                guard let data = response.data else {
                     completion(.failure(NetworkError.emptyData))
-                    return }
+                    return
+                }
                 do {
-                    let recepies = try decoder.decode(Recipices.self, from: data)
+                    let recepies = try self.decoder.decode(Recipices.self, from: data)
                     completion(.success(recepies))
                 }
                 catch {
                     completion(.failure(error))
                 }
             }
-            task.resume()
         } else {
-            print(URLError.invalidURL)
+            completion(.failure(URLError.invalidURL))
+        }
+    }
+    
+    func getRecipieInformation(for recipeID: Int, completion: @escaping (Result<RecipieInformation, Error>) -> ()) {
+//    https://api.spoonacular.com/recipes/716429/information
+        let url = URL(string: "https://api.spoonacular.com/recipes/\(recipeID)/information")
+        if let url = url {
+            AF.request(url, method: .get, headers: HTTPHeaders(["x-api-key": APIKEY])).responseData { response in
+                debugPrint("Request status code:", response.response?.statusCode as? Int ?? 0)
+                guard let data = response.data else {
+                    completion(.failure(NetworkError.emptyData))
+                    return
+                }
+                do {
+                    let recepies = try self.decoder.decode(RecipieInformation.self, from: data)
+                    completion(.success(recepies))
+                }
+                catch {
+                    completion(.failure(error))
+                }
+            }
+        } else {
+            completion(.failure(URLError.invalidURL))
         }
     }
 }

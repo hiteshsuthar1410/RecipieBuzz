@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3865D01B2AC31DD700F6FB5D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3865D01A2AC31DD700F6FB5D /* Alamofire */; };
+		3865D01D2AC34D1B00F6FB5D /* RecipieInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3865D01C2AC34D1B00F6FB5D /* RecipieInformation.swift */; };
 		3866D7B42ABEEBC9006230E3 /* RecepieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3866D7B32ABEEBC9006230E3 /* RecepieCell.swift */; };
 		387D60C22AC1EEBF00B1CC4C /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D60C12AC1EEBF00B1CC4C /* NetworkLayer.swift */; };
 		387D60C52AC1EFBC00B1CC4C /* Recepie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D60C42AC1EFBC00B1CC4C /* Recepie.swift */; };
@@ -21,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3865D01C2AC34D1B00F6FB5D /* RecipieInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipieInformation.swift; sourceTree = "<group>"; };
 		3866D7B32ABEEBC9006230E3 /* RecepieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieCell.swift; sourceTree = "<group>"; };
 		387D60C12AC1EEBF00B1CC4C /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		387D60C42AC1EFBC00B1CC4C /* Recepie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recepie.swift; sourceTree = "<group>"; };
@@ -41,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3865D01B2AC31DD700F6FB5D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +81,7 @@
 			children = (
 				387D60C72AC1F82700B1CC4C /* Error.swift */,
 				387D60C42AC1EFBC00B1CC4C /* Recepie.swift */,
+				3865D01C2AC34D1B00F6FB5D /* RecipieInformation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -130,6 +135,9 @@
 			dependencies = (
 			);
 			name = RecepieApp;
+			packageProductDependencies = (
+				3865D01A2AC31DD700F6FB5D /* Alamofire */,
+			);
 			productName = RecepieApp;
 			productReference = 38BE31BF2ABEE80100FBEBDF /* RecepieApp.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +166,9 @@
 				Base,
 			);
 			mainGroup = 38BE31B62ABEE80100FBEBDF;
+			packageReferences = (
+				3865D0192AC31DD700F6FB5D /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 38BE31C02ABEE80100FBEBDF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -188,6 +199,7 @@
 				387D60C82AC1F82700B1CC4C /* Error.swift in Sources */,
 				387D60C22AC1EEBF00B1CC4C /* NetworkLayer.swift in Sources */,
 				387D60C52AC1EFBC00B1CC4C /* Recepie.swift in Sources */,
+				3865D01D2AC34D1B00F6FB5D /* RecipieInformation.swift in Sources */,
 				38AC57932AC18F6D00BAE29F /* RecepieViewController.swift in Sources */,
 				38BE31C72ABEE80100FBEBDF /* HomeViewController.swift in Sources */,
 				3866D7B42ABEEBC9006230E3 /* RecepieCell.swift in Sources */,
@@ -410,6 +422,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3865D0192AC31DD700F6FB5D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3865D01A2AC31DD700F6FB5D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3865D0192AC31DD700F6FB5D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 38BE31B72ABEE80100FBEBDF /* Project object */;
 }

@@ -18,4 +18,5 @@ struct Recipe: Identifiable, Codable {
     let readyInMinutes: Int?
     let pricePerServing: Float?
     let dairyFree: Bool?
+    let dishTypes: [String]?
 }

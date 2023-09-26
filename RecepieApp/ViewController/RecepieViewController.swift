@@ -9,10 +9,50 @@ import UIKit
 
 class RecepieViewController: UIViewController {
 
+    static let identifier = "RecipieViewController"
+    
+    private var recipieID: Int?
+    @IBOutlet weak var recipieName: UILabel!
+    @IBOutlet weak var recipieDescription: UILabel!
+    @IBOutlet weak var ingridients: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Details"
+        
+        getRecipieInfo()
+        
 
         // Do any additional setup after loading the view.
+    }
+    
+    func configure(_ recipieID: Int) {
+        self.recipieID = recipieID
+    }
+    
+    func getRecipieInfo() {
+        guard let recipeID = recipieID else {
+            print("Empty Id")
+            return
+        }
+        Network.shared.getRecipieInformation(for: recipeID) { result in
+            switch result {
+            case .success(let recepie):
+                DispatchQueue.main.async {
+                    self.recipieName.text = recepie.title
+                    self.recipieDescription.text = recepie.summary
+                    if let ingredients = recepie.extendedIngredients {
+                        let instructions = ingredients.map { ingredient in
+                            return ingredient.original ?? "missing step" + "\n"
+                        }
+                    }
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
 
