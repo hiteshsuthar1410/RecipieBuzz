@@ -20,7 +20,6 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
         
         getRecipies()
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

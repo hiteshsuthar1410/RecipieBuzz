@@ -103,21 +103,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20s-J7-Qdj">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="570"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Luc-yk-RcI"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="hlM-mO-xfs"/>
+                            </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raspberry Banana Smoothie" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCB-og-XO6">
-                                <rect key="frame" x="6" y="103" width="393" height="88.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <rect key="frame" x="6" y="103" width="393" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lk9-eo-0yG">
-                                <rect key="frame" x="6" y="203.33333333333331" width="381" height="142.33333333333331"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lk9-eo-0yG">
+                                <rect key="frame" x="6" y="148.66666666666663" width="381" height="142.33333333333337"/>
                                 <string key="text">Is a refreshing blend of ripe bananas, frozen raspberries, and a choice of mineral water or low-fat yogurt. It can be sweetened with a tablespoon of honey and made chilled with ice cubes. Blend until smooth and pour into glasses, optionally garnishing with fresh berries or mint leaves. Enjoy this invigorating and delicious smoothie!</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vfF-f6-cRX">
-                                <rect key="frame" x="6" y="357.66666666666669" width="381" height="101.66666666666669"/>
+                                <rect key="frame" x="6" y="303" width="381" height="101.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingridients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUn-vW-O7B">
                                         <rect key="frame" x="0.0" y="0.0" width="381" height="20.333333333333332"/>
@@ -141,14 +145,18 @@
                         <viewLayoutGuide key="safeArea" id="ymH-fC-3Vw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="20s-J7-Qdj" firstAttribute="trailing" secondItem="ymH-fC-3Vw" secondAttribute="trailing" id="33W-wq-d3m"/>
+                            <constraint firstItem="20s-J7-Qdj" firstAttribute="top" secondItem="DZn-b0-YRJ" secondAttribute="top" id="64I-ZY-jyu"/>
                             <constraint firstItem="iCB-og-XO6" firstAttribute="leading" secondItem="ymH-fC-3Vw" secondAttribute="leading" constant="6" id="68J-1K-DHr"/>
                             <constraint firstItem="Lk9-eo-0yG" firstAttribute="top" secondItem="iCB-og-XO6" secondAttribute="bottom" constant="12" id="92f-XT-6Zs"/>
                             <constraint firstItem="ymH-fC-3Vw" firstAttribute="trailing" secondItem="Lk9-eo-0yG" secondAttribute="trailing" constant="6" id="Hcs-gE-OuK"/>
                             <constraint firstItem="vfF-f6-cRX" firstAttribute="top" secondItem="Lk9-eo-0yG" secondAttribute="bottom" constant="12" id="Lsu-fU-hvy"/>
+                            <constraint firstItem="20s-J7-Qdj" firstAttribute="leading" secondItem="ymH-fC-3Vw" secondAttribute="leading" id="Ngs-WX-6CA"/>
                             <constraint firstItem="vfF-f6-cRX" firstAttribute="leading" secondItem="ymH-fC-3Vw" secondAttribute="leading" constant="6" id="Xq5-t8-xUj"/>
                             <constraint firstItem="iCB-og-XO6" firstAttribute="top" secondItem="ymH-fC-3Vw" secondAttribute="top" id="aOl-0k-Jrz"/>
                             <constraint firstItem="iCB-og-XO6" firstAttribute="trailing" secondItem="ymH-fC-3Vw" secondAttribute="trailing" constant="6" id="bhJ-JP-56H"/>
                             <constraint firstItem="Lk9-eo-0yG" firstAttribute="leading" secondItem="ymH-fC-3Vw" secondAttribute="leading" constant="6" id="gbl-gO-ctc"/>
+                            <constraint firstAttribute="bottom" secondItem="20s-J7-Qdj" secondAttribute="bottom" id="hUC-dF-3WN"/>
                             <constraint firstItem="ymH-fC-3Vw" firstAttribute="trailing" secondItem="vfF-f6-cRX" secondAttribute="trailing" constant="6" id="jQ5-Y3-A2N"/>
                         </constraints>
                     </view>

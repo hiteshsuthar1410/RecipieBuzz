@@ -24,9 +24,4 @@ struct RecipieInformation: Decodable {
 struct ExtendedIngredient: Codable {
     let id: Int
     let original: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case id
-        case original = "instruction"
-    }
 }

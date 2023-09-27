@@ -10,6 +10,7 @@
 		3865D01B2AC31DD700F6FB5D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3865D01A2AC31DD700F6FB5D /* Alamofire */; };
 		3865D01D2AC34D1B00F6FB5D /* RecipieInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3865D01C2AC34D1B00F6FB5D /* RecipieInformation.swift */; };
 		3866D7B42ABEEBC9006230E3 /* RecepieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3866D7B32ABEEBC9006230E3 /* RecepieCell.swift */; };
+		386A2C422AC476120029FC32 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386A2C412AC476120029FC32 /* Extensions.swift */; };
 		387D60C22AC1EEBF00B1CC4C /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D60C12AC1EEBF00B1CC4C /* NetworkLayer.swift */; };
 		387D60C52AC1EFBC00B1CC4C /* Recepie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D60C42AC1EFBC00B1CC4C /* Recepie.swift */; };
 		387D60C82AC1F82700B1CC4C /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D60C72AC1F82700B1CC4C /* Error.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		3865D01C2AC34D1B00F6FB5D /* RecipieInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipieInformation.swift; sourceTree = "<group>"; };
 		3866D7B32ABEEBC9006230E3 /* RecepieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieCell.swift; sourceTree = "<group>"; };
+		386A2C412AC476120029FC32 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		387D60C12AC1EEBF00B1CC4C /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		387D60C42AC1EFBC00B1CC4C /* Recepie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recepie.swift; sourceTree = "<group>"; };
 		387D60C72AC1F82700B1CC4C /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				3866D7B52ABEEBCE006230E3 /* Views */,
 				387D60C32AC1EEC300B1CC4C /* Managers */,
 				387D60C62AC1EFC200B1CC4C /* Models */,
+				386A2C412AC476120029FC32 /* Extensions.swift */,
 			);
 			path = RecepieApp;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				387D60C52AC1EFBC00B1CC4C /* Recepie.swift in Sources */,
 				3865D01D2AC34D1B00F6FB5D /* RecipieInformation.swift in Sources */,
 				38AC57932AC18F6D00BAE29F /* RecepieViewController.swift in Sources */,
+				386A2C422AC476120029FC32 /* Extensions.swift in Sources */,
 				38BE31C72ABEE80100FBEBDF /* HomeViewController.swift in Sources */,
 				3866D7B42ABEEBC9006230E3 /* RecepieCell.swift in Sources */,
 				38BE31C32ABEE80100FBEBDF /* AppDelegate.swift in Sources */,
