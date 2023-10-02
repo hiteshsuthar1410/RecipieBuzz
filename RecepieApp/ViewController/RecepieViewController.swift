@@ -12,6 +12,7 @@ class RecepieViewController: UIViewController {
     static let identifier = "RecipieViewController"
     
     private var recipieID: Int?
+    @IBOutlet weak var recipieImage: UIImageView!
     @IBOutlet weak var recipieName: UILabel!
     @IBOutlet weak var recipieDescription: UILabel!
     @IBOutlet weak var ingridients: UILabel!
@@ -65,6 +66,11 @@ class RecepieViewController: UIViewController {
                     self.recipieName.text = recepie.title
                     self.recipieDescription.text = summary
                     self.ingridients.text = ingredients
+                }
+                if let url = URL(string: recepie.image ?? "") {
+                    self.recipieImage.af.setImage(withURL: url)
+                } else {
+                    print(URLError.invalidURL)
                 }
             case .failure(let error):
                 print(error)

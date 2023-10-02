@@ -5,7 +5,8 @@
 //  Created by Hitesh Suthar on 25/09/23.
 //
 import Alamofire
-import Foundation
+import AlamofireImage
+import UIKit
 class Network {
     private let APIKEY = "efa7fdea98b04835bab08e9ba40ac1f6"
     private let resultSize = 10
@@ -39,6 +40,23 @@ class Network {
             }
         } else {
             completion(.failure(URLError.invalidURL))
+        }
+    }
+    
+    func getRecipieImage(imageURL: String?, completion: @escaping (Result<UIImage, Error>) -> ()) {
+        guard let imageURL = imageURL else  { print("invalid url")
+            completion(.failure(URLError.invalidURL))
+            return
+        }
+        
+        AF.request(imageURL).responseImage { response in
+            switch response.result {
+            case .success(let image):
+                completion(.success(image))
+                print("image downloaded: \(image)")
+            case .failure(let error):
+                completion(.failure(error))
+            }
         }
     }
     

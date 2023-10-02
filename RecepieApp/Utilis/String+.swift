@@ -1,5 +1,5 @@
 //
-//  Extensions.swift
+//  String+.swift
 //  RecepieApp
 //
 //  Created by Hitesh Suthar on 27/09/23.

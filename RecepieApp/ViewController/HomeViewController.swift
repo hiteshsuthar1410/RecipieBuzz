@@ -5,6 +5,7 @@
 //  Created by Hitesh Suthar on 23/09/23.
 //
 
+import AlamofireImage
 import UIKit
 
 class HomeViewController: UIViewController {
@@ -34,12 +35,12 @@ class HomeViewController: UIViewController {
     }
     
     private func getRecipies() {
-        Network.shared.getRandomRecepies { result in
+        Network.shared.getRandomRecepies { [weak self] result in
             switch result {
             case .success(let recepies):
                 DispatchQueue.main.async {
-                    self.recepies = recepies.recipes
-                    self.tableView.reloadData()
+                    self?.recepies = recepies.recipes
+                    self?.tableView.reloadData()
                 }
             case .failure(let error):
                 print(error)
@@ -54,12 +55,15 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             print("Cell can not convert to RecepieCell")
             return UITableViewCell()
         }
-        
         let recipie = self.recepies[indexPath.row]
         cell.recepieName.text = recipie.title
-        cell.recepieImage.image = UIImage(named: "recepiePlaceholderImage")
+        if let url = URL(string: recipie.image ?? "") {
+            cell.recepieImage.af.setImage(withURL: url)
+        } else {
+            print(URLError.invalidURL)
+        }
         if let dishTypes = recipie.dishTypes  {
-            cell.recepieType.text = dishTypes.first
+            cell.recepieType.text = dishTypes.first?.capitalized
         }
         return cell
     }
