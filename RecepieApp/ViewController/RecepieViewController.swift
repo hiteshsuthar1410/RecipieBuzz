@@ -20,11 +20,8 @@ class RecepieViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "Details"
-        
         getRecipieInfo()
-        
 
         // Do any additional setup after loading the view.
     }
