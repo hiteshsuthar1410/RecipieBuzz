@@ -217,65 +217,53 @@
             </objects>
             <point key="canvasLocation" x="1919.8473282442746" y="6.3380281690140849"/>
         </scene>
-        <!--View Controller-->
+        <!--Receipie Instruction View Controller-->
         <scene sceneID="veF-jS-Uvo">
             <objects>
-                <viewController id="Bsa-3X-79F" sceneMemberID="viewController">
+                <viewController id="Bsa-3X-79F" customClass="ReceipieInstructionViewController" customModule="RecepieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IoB-rN-KxF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipC-LR-5GH">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="a2d-jv-AOP" userLabel="tableView">
                                 <rect key="frame" x="0.0" y="59" width="393" height="724"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wg6-TS-X7g">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1339"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDI-CO-yWZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="1339"/>
-                                                <mutableString key="text">As long as the web has existed, this advice has rung true: “Don’t believe everything you see on the internet.” Whether it’s a personal blog, a tweet, a YouTube video, or a TikTok, anyone can say anything on here, and it’s tough to know whether or not they’re right (or even telling the truth).
-
-But we’re at an inflection point in internet literacy: Generative AI has reached a scary place, with tech good enough to mimic the likeness of celebrities and make these “clones” say whatever they want. To those in the know, these deepfakes might not be convincing yet, but what about the average social media user? It seems we’re rapidly approaching a point where the general public will start to believe these fraudulent videos are real, and that’s a frightening thought.
-
-There are three high-profile examples of this just from the past week or so. The first is Tom Hanks: The actor posted a screenshot on his Instagram from a video promoting a “dental plan,” with a spokesperson that looks like Tom Hanks if he had his teeth reinstalled. The video itself doesn’t appear to be public, and Hanks didn’t share it or the name of the company promoting it. But the assumption is some company or person made a deepfake of Tom Hanks to sell a dental product. As I mentioned, taking a good look at the image, you can already tell there’s something “off” about his face, and had we been able to see the video, it’s likely that the motion would have the stiff, uncanny valley look that so many AI deepfakes have.  As long as the web has existed, this advice has rung true: “Don’t believe everything you see on the internet.” Whether it’s a personal blog, a tweet, a YouTube video, or a TikTok, anyone can say anything on here, and it’s tough to know whether or not they’re right (or even telling the truth).
-
-But we’re at an inflection point in internet literacy: Generative AI has reached a scary place, with tech good enough to mimic the likeness of celebrities and make these “clones” say whatever they want. To those in the know, these deepfakes might not be convincing yet, but what about the average social media user? It seems we’re rapidly approaching a point where the general public will start to believe these fraudulent videos are real, and that’s a frightening thought.
-
-There are three high-profile examples of this just from the past week or so. The first is Tom Hanks: The actor posted a screenshot on his Instagram from a video promoting a “dental plan,” with a spokesperson that looks like Tom Hanks if he had his teeth reinstalled. The video itself doesn’t appear to be public, and Hanks didn’t share it or the name of the company promoting it. But the assumption is some company or person made a deepfake of Tom Hanks to sell a dental product. As I mentioned, taking a good look at the image, you can already tell there’s something “off” about his face, and had we been able to see the video, it’s likely that the motion would have the stiff, uncanny valley look that so many AI deepfakes have. </mutableString>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="hDI-CO-yWZ" firstAttribute="leading" secondItem="wg6-TS-X7g" secondAttribute="leading" id="BIa-Ih-zal"/>
-                                            <constraint firstItem="hDI-CO-yWZ" firstAttribute="top" secondItem="wg6-TS-X7g" secondAttribute="top" id="Goo-w8-sjx"/>
-                                            <constraint firstAttribute="bottom" secondItem="hDI-CO-yWZ" secondAttribute="bottom" id="Ncl-sr-IJN"/>
-                                            <constraint firstAttribute="trailing" secondItem="hDI-CO-yWZ" secondAttribute="trailing" id="Qou-fY-g9U"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="wg6-TS-X7g" firstAttribute="bottom" secondItem="fmo-f8-jiY" secondAttribute="bottom" id="JKH-jk-iLR"/>
-                                    <constraint firstItem="wg6-TS-X7g" firstAttribute="width" secondItem="MZ6-ss-soA" secondAttribute="width" id="kCa-43-e6U"/>
-                                    <constraint firstItem="wg6-TS-X7g" firstAttribute="trailing" secondItem="fmo-f8-jiY" secondAttribute="trailing" id="r6w-4z-woJ"/>
-                                    <constraint firstItem="wg6-TS-X7g" firstAttribute="top" secondItem="fmo-f8-jiY" secondAttribute="top" id="rHO-BX-gjU"/>
-                                    <constraint firstItem="wg6-TS-X7g" firstAttribute="leading" secondItem="fmo-f8-jiY" secondAttribute="leading" id="t0d-ne-e7Y"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="fmo-f8-jiY"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="MZ6-ss-soA"/>
-                            </scrollView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="recipieInstructionCellTableViewCell" id="5z2-Ud-hhI" customClass="RecipieInstructionCellTableViewCell" customModule="RecepieApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5z2-Ud-hhI" id="o25-L2-iT7">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCE-Mo-w0d">
+                                                    <rect key="frame" x="33" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="stepInstruction" destination="HCE-Mo-w0d" id="L8C-fL-Qat"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ucq-ME-ZPK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ucq-ME-ZPK" firstAttribute="trailing" secondItem="ipC-LR-5GH" secondAttribute="trailing" id="DLy-C7-sqO"/>
-                            <constraint firstItem="ipC-LR-5GH" firstAttribute="leading" secondItem="ucq-ME-ZPK" secondAttribute="leading" id="Jbg-se-zWQ"/>
-                            <constraint firstItem="ipC-LR-5GH" firstAttribute="top" secondItem="ucq-ME-ZPK" secondAttribute="top" id="PUm-wa-did"/>
-                            <constraint firstItem="ucq-ME-ZPK" firstAttribute="bottom" secondItem="ipC-LR-5GH" secondAttribute="bottom" id="ZhF-PX-UXh"/>
+                            <constraint firstItem="ucq-ME-ZPK" firstAttribute="trailing" secondItem="a2d-jv-AOP" secondAttribute="trailing" id="5yf-ZU-Nm9"/>
+                            <constraint firstItem="a2d-jv-AOP" firstAttribute="top" secondItem="ucq-ME-ZPK" secondAttribute="top" id="M5x-IW-PYP"/>
+                            <constraint firstItem="ucq-ME-ZPK" firstAttribute="bottom" secondItem="a2d-jv-AOP" secondAttribute="bottom" id="Swg-eg-bfy"/>
+                            <constraint firstItem="a2d-jv-AOP" firstAttribute="leading" secondItem="ucq-ME-ZPK" secondAttribute="leading" id="vDu-FH-qCP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="a2d-jv-AOP" id="WNk-Dh-A5F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Va-Td-KXT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

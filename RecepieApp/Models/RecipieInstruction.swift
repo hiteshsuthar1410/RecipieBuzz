@@ -6,8 +6,6 @@
 //
 
 import Foundation
-struct RecipieInstructionResponse: Codable {
-    let recipeInstruction: [RecipieInstruction]?
     
     struct RecipieInstruction: Codable {
         let name: String?
@@ -16,5 +14,5 @@ struct RecipieInstructionResponse: Codable {
     struct RecipieInstructionStep: Codable {
         let number: Int?
         let step: String?
-    }
+    
 }

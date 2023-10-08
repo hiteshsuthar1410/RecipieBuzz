@@ -83,7 +83,7 @@ class Network {
         }
     }
     
-    func getRecipieInstructions(ofrecipieID recipieID: Int, completion: @escaping (Result<RecipieInstructionResponse, Error>) -> ()) {
+    func getRecipieInstructions(ofrecipieID recipieID: Int, completion: @escaping (Result<[RecipieInstruction], Error>) -> ()) {
         let url = URL(string: "https://api.spoonacular.com/recipes/\(recipieID)/analyzedInstructions")
         if let url = url {
             AF.request(url, method: .get, headers: HTTPHeaders(["x-api-key": APIKEY])).responseData { response in
@@ -92,8 +92,11 @@ class Network {
                     completion(.failure(NetworkError.emptyData))
                     return
                 }
+                data.printJSON()
+                
                 do {
-                    let recipieInstructionResponse = try self.decoder.decode(RecipieInstructionResponse.self, from: data)
+                    
+                    let recipieInstructionResponse = try self.decoder.decode([RecipieInstruction].self, from: data)
                     completion(.success(recipieInstructionResponse))
                 } catch {
                     completion(.failure(error))
@@ -101,6 +104,16 @@ class Network {
             }
         } else {
             completion(.failure(URLError.invalidURL))
+        }
+    }
+}
+extension Data
+{
+    func printJSON()
+    {
+        if let JSONString = String(data: self, encoding: String.Encoding.utf8)
+        {
+            print(JSONString)
         }
     }
 }

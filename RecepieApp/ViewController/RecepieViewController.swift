@@ -26,6 +26,25 @@ class RecepieViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard let instructionVC = segue.destination as? ReceipieInstructionViewController else {
+            debugPrint(CastingError.viewControllerCasting.localizedDescription)
+            return
+        }
+        Network.shared.getRecipieInstructions(ofrecipieID: recipieID!) { result in
+            switch result {
+            case .success(let receivedResponse):
+                DispatchQueue.main.async {
+                    instructionVC.configure(recipieInstruction: receivedResponse)
+                }
+            case .failure(let errror):
+                debugPrint(errror)
+            }
+        }
+        
+    }
+    
     func configure(_ recipieID: Int) {
         self.recipieID = recipieID
     }

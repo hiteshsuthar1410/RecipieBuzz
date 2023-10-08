@@ -17,3 +17,12 @@ enum NetworkError: Error {
 enum JSONError: Error {
     case conversionFailure
 }
+
+enum PropertyError: String, Error {
+    case emptyProperty = "Found nil in the property"
+}
+
+enum CastingError: String, Error {
+    case viewControllerCasting = "View Controller casting failed"
+    case itemORCellCasting = "Cell/Item casting failed"
+}
