@@ -45,11 +45,11 @@ class ReceipieInstructionViewController: UIViewController {
 
 extension ReceipieInstructionViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let numberOfSteps = recipieInstruction?.count else {
-            debugPrint(PropertyError.emptyProperty.localizedDescription)
-            return 0
-        }
-        return numberOfSteps
+//        guard let numberOfSteps = recipieInstruction?.first?.steps?.count else {
+//            debugPrint(PropertyError.emptyProperty.localizedDescription)
+//            return 1
+//        }
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,8 +57,21 @@ extension ReceipieInstructionViewController: UITableViewDelegate, UITableViewDat
             debugPrint(CastingError.itemORCellCasting.localizedDescription)
             return UITableViewCell()
         }
+        cell.configure(stepInstruction: recipieInstruction?.first?.steps?[indexPath.section].step)
         return cell
     }
+    
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        guard let numberOfSections = recipieInstruction?[0].steps?.count else {
+            debugPrint(PropertyError.emptyProperty)
+            return 1
+        }
+        return numberOfSections
+    }
+    
+    
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let stepNumber = recipieInstruction?[0].steps?[section].number else {
@@ -67,6 +80,8 @@ extension ReceipieInstructionViewController: UITableViewDelegate, UITableViewDat
         }
         return "Step \(stepNumber)"
     }
+    
+    
     
     
 }
