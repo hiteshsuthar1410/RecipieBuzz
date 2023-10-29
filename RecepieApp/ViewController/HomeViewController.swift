@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     
     var recepies = [Recipe]()
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -20,7 +21,7 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        getRecipies()
+        activityIndicator.startAnimating()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -35,15 +36,20 @@ class HomeViewController: UIViewController {
     }
     
     private func getRecipies() {
+        Network.shared.fetching = true
         Network.shared.getRandomRecepies { [weak self] result in
             switch result {
             case .success(let recepies):
                 DispatchQueue.main.async {
-                    self?.recepies = recepies.recipes
+                    self?.recepies.append(contentsOf: recepies.recipes)
+                    Network.shared.pageOffset += 1
                     self?.tableView.reloadData()
+                    Network.shared.fetching = false
                 }
             case .failure(let error):
                 print(error)
+                self?.activityIndicator?.stopAnimating()
+                self?.activityIndicator?.isHidden = true
             }
         }
     }
@@ -52,13 +58,15 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: RecepieCell.indetifier, for: indexPath) as? RecepieCell else {
-            print("Cell can not convert to RecepieCell")
+            print("Cell could not be converted to RecepieCell")
             return UITableViewCell()
         }
         let recipie = self.recepies[indexPath.row]
         cell.recepieName.text = recipie.title
         if let url = URL(string: recipie.image ?? "") {
-            cell.recepieImage.af.setImage(withURL: url)
+            DispatchQueue.main.async {
+                cell.recepieImage.af.setImage(withURL: url)
+            }
         } else {
             print(URLError.invalidURL)
         }
@@ -73,3 +81,21 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+extension HomeViewController {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        ///Reference :- https://www.youtube.com/watch?v=OTHkcf9gSRw
+        
+        let offsetY = scrollView.contentOffset.y // Distance between top of scrollView and Top of contentView
+        let contentHeight = scrollView.contentSize.height // Complete height of the scrollview (increases as the more content is added)
+        let visibleScrollViewHeight = scrollView.frame.size.height // Height of the scrollView visible on screen (fixed)
+        if offsetY > contentHeight - visibleScrollViewHeight - 100 {
+            guard !Network.shared.fetching else {
+                return
+            }
+            print("Load more")
+            getRecipies()
+        }
+        
+    }
+}

@@ -10,9 +10,12 @@ import UIKit
 class Network {
     private let APIKEY = "efa7fdea98b04835bab08e9ba40ac1f6"
     private let resultSize = 10
+    var pageOffset = 0
     let decoder = JSONDecoder()
     private init() {}
     static let shared = Network()
+    
+    var fetching = false
     
     func getRandomRecepies(completion: @escaping (Result<Recipices, Error>) -> ())  -> () {
         // 'Result' is an Enum of Type <SuccessType, Error>
@@ -22,7 +25,7 @@ class Network {
         // Try is inside the do block
         // Catch is outside of the do block
         
-        let url = URL(string: "https://api.spoonacular.com/recipes/random?number=\(resultSize)")
+        let url = URL(string: "https://api.spoonacular.com/recipes/random?number=\(resultSize)&offset=\(pageOffset)")
         if let url = url {
             AF.request(url, method: .get, headers: HTTPHeaders(["x-api-key": APIKEY])).responseData { response in
                 debugPrint("Request status code:", response.response?.statusCode as? Int ?? 0)

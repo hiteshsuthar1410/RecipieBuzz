@@ -19,9 +19,12 @@ class ReceipieInstructionViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.setNeedsLayout()
+            tableView.layoutIfNeeded()
+            tableView.reloadData()
         // Do any additional setup after loading the view.
-        
     }
+    
     
     func configure(recipieInstruction: [RecipieInstruction]) {
         DispatchQueue.main.async {
