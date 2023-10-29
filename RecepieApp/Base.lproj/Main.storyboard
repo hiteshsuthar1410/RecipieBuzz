@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="smY-W4-0lm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7QA-lm-EJ0">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -105,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1066.4122137404579" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1993.1297709923663" y="-2.1126760563380285"/>
         </scene>
         <!--Recepie View Controller-->
         <scene sceneID="jzF-qA-Je1">
@@ -223,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JYt-o1-PkV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1919.8473282442746" y="6.3380281690140849"/>
+            <point key="canvasLocation" x="2846.5648854961833" y="6.3380281690140849"/>
         </scene>
         <!--Receipie Instruction View Controller-->
         <scene sceneID="veF-jS-Uvo">
@@ -281,12 +281,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Va-Td-KXT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2719.8473282442746" y="6.3380281690140849"/>
+            <point key="canvasLocation" x="3646.5648854961833" y="6.3380281690140849"/>
         </scene>
-        <!--Let's go! Chef-->
+        <!--Recipies-->
         <scene sceneID="nfU-56-Yhp">
             <objects>
-                <navigationController title="Let's go! Chef" automaticallyAdjustsScrollViewInsets="NO" id="smY-W4-0lm" sceneMemberID="viewController">
+                <navigationController title="Recipies" automaticallyAdjustsScrollViewInsets="NO" id="smY-W4-0lm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Recipies" image="menucard" catalog="system" id="6OI-vk-2K6">
+                        <color key="badgeColor" red="0.9295925498008728" green="0.60629564523696899" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <imageReference key="selectedImage" image="menucard" catalog="system" variableValue="1"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="MH0-Jw-IgM">
@@ -300,11 +304,70 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZRd-tC-p21" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1066.4122137404579" y="-2.1126760563380285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oxH-9P-yRw">
+            <objects>
+                <viewController id="QdI-TN-tls" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c18-oT-yAB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="NZs-Tc-9JJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8uv-Yx-Suw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1n4-yW-4Jb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1950.3816793893129" y="717.6056338028169"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LZY-Ku-fey">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="7QA-lm-EJ0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RhP-o3-5dJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.9295925498008728" green="0.60629564523696899" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="smY-W4-0lm" kind="relationship" relationship="viewControllers" id="l9X-fG-pmx"/>
+                        <segue destination="U51-pv-68L" kind="relationship" relationship="viewControllers" id="PFE-Xx-DlI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4dh-Ru-SmQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="139.69465648854961" y="-2.1126760563380285"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="iqZ-f2-gMF">
+            <objects>
+                <navigationController title="Profile" automaticallyAdjustsScrollViewInsets="NO" id="U51-pv-68L" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="gkG-yB-mCA">
+                        <color key="badgeColor" red="0.9295925498008728" green="0.60629564523696899" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nx2-wy-RaV">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QdI-TN-tls" kind="relationship" relationship="rootViewController" id="C3a-lZ-UC1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Te-9f-pW7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066" y="746"/>
         </scene>
     </scenes>
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="menucard" catalog="system" width="108" height="128"/>
+        <image name="person" catalog="system" width="128" height="121"/>
         <image name="play.circle" catalog="system" width="128" height="123"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

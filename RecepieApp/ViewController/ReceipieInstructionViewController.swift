@@ -18,10 +18,7 @@ class ReceipieInstructionViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
-        tableView.setNeedsLayout()
-            tableView.layoutIfNeeded()
-            tableView.reloadData()
+        tableView.reloadData()
         // Do any additional setup after loading the view.
     }
     
@@ -48,10 +45,6 @@ class ReceipieInstructionViewController: UIViewController {
 
 extension ReceipieInstructionViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        guard let numberOfSteps = recipieInstruction?.first?.steps?.count else {
-//            debugPrint(PropertyError.emptyProperty.localizedDescription)
-//            return 1
-//        }
         return 1
     }
     
@@ -83,8 +76,4 @@ extension ReceipieInstructionViewController: UITableViewDelegate, UITableViewDat
         }
         return "Step \(stepNumber)"
     }
-    
-    
-    
-    
 }
