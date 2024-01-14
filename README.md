@@ -4,8 +4,8 @@
 Welcome to RecipieBuzz, your go-to app for exploring and saving delicious recipes! Letz Cook is crafted with UIKit and Storyboard, offering an easy-to-use interface to discover, view, and save your favorite recipes.
 
 ## Screenshots
-|  Home                            |  Recipe Overview                                       |  Recipie Instructions                               |  Profile                                     |  Childscreen                                |
-| ------------------------------------------- | ------------------------------------------- | ------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
+|  Home                                       |  Recipe Overview                            |  Recipie Instructions                       |  Profile                                    |
+| ------------------------------------------- | ------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
 |  ![HomeScreen](https://github.com/hiteshsuthar1410/RecipieBuzz/assets/80826512/dee84165-04bb-40aa-be41-1094780b9b13)  |  ![RecipieOverview](https://github.com/hiteshsuthar1410/RecipieBuzz/assets/80826512/1ab2705c-9334-456b-9e3e-fa4d3a826958)  |  ![RecipeInstructions](https://github.com/hiteshsuthar1410/RecipieBuzz/assets/80826512/ff9e8ae0-b6fe-42c5-bd8e-15a53fd73deb)  |  ![ProfileScreen](https://github.com/hiteshsuthar1410/RecipieBuzz/assets/80826512/be94be1f-9e42-4fd4-a7ed-5a1aebcefc76)  |
   
 
@@ -25,7 +25,7 @@ If you have any questions or would like to collaborate on this project, feel fre
 - LinkedIn: [Hitesh Suthar](https://www.linkedin.com/in/hitesh-suthar-03558215a/)
 
 ## Acknowledgments
-- Special thanks to [amrhossam96](https://github.com/amrhossam96) and [freeCodecmap](https://github.com/freeCodeCamp) for the tutorial that inspired this project.
+- Special thanks to [Flatart and Freepik for Placeholders](https://www.freepik.com/free-vector/creative-food-25-outline-icon-pack-such-as-cream-potato-food-food-hat_37001081.htm#query=food%20icon&position=26&from_view=search&track=ais&uuid=019253d4-6431-43d7-9274-87746b880c2c) and [Jeffrey Keenan](https://unsplash.com/@jeffreykeenan) for user profile image.
 
 
 
