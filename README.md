@@ -1,12 +1,12 @@
 # RecipieBuzz - The Recipe App
 
 ## Description
-Welcome to RecipieBuzz, your go-to app for exploring and saving delicious recipes! Letz Cook is crafted with UIKit and Storyboard, offering an easy-to-use interface to discover, view, and save your favorite recipes.
+Welcome to RecipieBuzz, your go-to app for exploring and saving delicious recipes! RecipeBuzz is crafted with UIKit and Storyboard, offering an easy-to-use interface to discover, view, and save your favorite recipes.
 
 ## Screenshots
 |  Home                                       |  Recipe Overview                            |  Recipie Instructions                       |  Profile                                    |
 | ------------------------------------------- | ------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
-|  ![HomeScreen](https://github.com/hiteshsuthar1410/RecipieBuzz/assets/80826512/dee84165-04bb-40aa-be41-1094780b9b13)  |  ![RecipieOverview](https://github.com/hiteshsuthar1410/RecipieBuzz/assets/80826512/1ab2705c-9334-456b-9e3e-fa4d3a826958)  |  ![RecipeInstructions](https://github.com/hiteshsuthar1410/RecipieBuzz/assets/80826512/ff9e8ae0-b6fe-42c5-bd8e-15a53fd73deb)  |  ![ProfileScreen](https://github.com/hiteshsuthar1410/RecipieBuzz/assets/80826512/be94be1f-9e42-4fd4-a7ed-5a1aebcefc76)  |
+| ![HomeScreen](https://github.com/hiteshsuthar1410/RecipieBuzz/assets/80826512/dee84165-04bb-40aa-be41-1094780b9b13) | ![RecipieOverview](https://github.com/hiteshsuthar1410/RecipieBuzz/assets/80826512/1ab2705c-9334-456b-9e3e-fa4d3a826958) | ![RecipeInstructions](https://github.com/hiteshsuthar1410/RecipieBuzz/assets/80826512/ff9e8ae0-b6fe-42c5-bd8e-15a53fd73deb) | ![ProfileScreen](https://github.com/hiteshsuthar1410/RecipieBuzz/assets/80826512/be94be1f-9e42-4fd4-a7ed-5a1aebcefc76) |
   
 
 ## Installation
