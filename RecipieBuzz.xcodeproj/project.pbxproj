@@ -48,7 +48,7 @@
 		387D60C72AC1F82700B1CC4C /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		38AC57922AC18F6D00BAE29F /* RecepieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieViewController.swift; sourceTree = "<group>"; };
 		38B6FE622B53E19900076D5B /* ProfileImageViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageViewTableViewCell.swift; sourceTree = "<group>"; };
-		38BE31BF2ABEE80100FBEBDF /* RecepieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecepieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38BE31BF2ABEE80100FBEBDF /* RecipieBuzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipieBuzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38BE31C22ABEE80100FBEBDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38BE31C42ABEE80100FBEBDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		38BE31C62ABEE80100FBEBDF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 		38BE31C02ABEE80100FBEBDF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				38BE31BF2ABEE80100FBEBDF /* RecepieApp.app */,
+				38BE31BF2ABEE80100FBEBDF /* RecipieBuzz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,9 +159,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		38BE31BE2ABEE80100FBEBDF /* RecepieApp */ = {
+		38BE31BE2ABEE80100FBEBDF /* RecipieBuzz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38BE31D32ABEE80200FBEBDF /* Build configuration list for PBXNativeTarget "RecepieApp" */;
+			buildConfigurationList = 38BE31D32ABEE80200FBEBDF /* Build configuration list for PBXNativeTarget "RecipieBuzz" */;
 			buildPhases = (
 				38BE31BB2ABEE80100FBEBDF /* Sources */,
 				38BE31BC2ABEE80100FBEBDF /* Frameworks */,
@@ -171,13 +171,13 @@
 			);
 			dependencies = (
 			);
-			name = RecepieApp;
+			name = RecipieBuzz;
 			packageProductDependencies = (
 				3865D01A2AC31DD700F6FB5D /* Alamofire */,
 				3895EBCE2AC807D700DA2472 /* AlamofireImage */,
 			);
 			productName = RecepieApp;
-			productReference = 38BE31BF2ABEE80100FBEBDF /* RecepieApp.app */;
+			productReference = 38BE31BF2ABEE80100FBEBDF /* RecipieBuzz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -212,7 +212,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				38BE31BE2ABEE80100FBEBDF /* RecepieApp */,
+				38BE31BE2ABEE80100FBEBDF /* RecipieBuzz */,
 			);
 		};
 /* End PBXProject section */
@@ -413,7 +413,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = in.hiteshsuthar.RecepieBuzz;
+				PRODUCT_BUNDLE_IDENTIFIER = in.hiteshsuthar.RecipieBuzz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -442,7 +442,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = in.hiteshsuthar.RecepieBuzz;
+				PRODUCT_BUNDLE_IDENTIFIER = in.hiteshsuthar.RecipieBuzz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -462,7 +462,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		38BE31D32ABEE80200FBEBDF /* Build configuration list for PBXNativeTarget "RecepieApp" */ = {
+		38BE31D32ABEE80200FBEBDF /* Build configuration list for PBXNativeTarget "RecipieBuzz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38BE31D42ABEE80200FBEBDF /* Debug */,

@@ -1,5 +1,5 @@
 //
-//  RecepieViewController.swift
+//  RecipieViewController.swift
 //  RecipieBuzz
 //
 //  Created by Hitesh Suthar on 25/09/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RecepieViewController: UIViewController {
+class RecipieViewController: UIViewController {
 
     static let identifier = "RecipieViewController"
     
@@ -75,15 +75,15 @@ class RecepieViewController: UIViewController {
         }
         Network.shared.getRecipieInformation(for: recipeID) { result in
             switch result {
-            case .success(let recepie):
-                let summary = self.formatRecipeSummary(htmlsummary: recepie.summary)
-                let ingredients = self.formatRecipieIngrideents(extendedIngredients: recepie.extendedIngredients)
+            case .success(let recipie):
+                let summary = self.formatRecipeSummary(htmlsummary: recipie.summary)
+                let ingredients = self.formatRecipieIngrideents(extendedIngredients: recipie.extendedIngredients)
                 DispatchQueue.main.async {
-                    self.recipieName.text = recepie.title
+                    self.recipieName.text = recipie.title
                     self.recipieDescription.text = summary
                     self.ingridients.text = ingredients
                 }
-                if let url = URL(string: recepie.image ?? "") {
+                if let url = URL(string: recipie.image ?? "") {
                     self.recipieImage.af.setImage(withURL: url)
                 } else {
                     print(URLError.invalidURL)

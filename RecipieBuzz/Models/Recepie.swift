@@ -1,5 +1,5 @@
 //
-//  Recepie.swift
+//  Recipie.swift
 //  RecipieBuzz
 //
 //  Created by Hitesh Suthar on 25/09/23.

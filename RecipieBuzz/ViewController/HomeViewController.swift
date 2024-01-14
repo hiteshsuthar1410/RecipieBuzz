@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    var recepies = [Recipe]()
+    var recipies = [Recipe]()
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
@@ -34,22 +34,22 @@ class HomeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        guard let recepieVC = segue.destination as? RecepieViewController else {
-            print("Destination vc is not of type RecepieVC")
+        guard let recipieVC = segue.destination as? RecipieViewController else {
+            print("Destination vc is not of type RecipieVC")
             return
         }
         if let indexPath = tableView.indexPathForSelectedRow {
-            recepieVC.configure(recepies[indexPath.row].id)
+            recipieVC.configure(recipies[indexPath.row].id)
         }
     }
     
     private func getRecipies() {
         Network.shared.fetching = true
-        Network.shared.getRandomRecepies { [weak self] result in
+        Network.shared.getRandomRecipies { [weak self] result in
             switch result {
-            case .success(let recepies):
+            case .success(let recipies):
                 DispatchQueue.main.async {
-                    self?.recepies.append(contentsOf: recepies.recipes)
+                    self?.recipies.append(contentsOf: recipies.recipes)
                     Network.shared.pageOffset += 1
                     self?.tableView.reloadData()
                     Network.shared.fetching = false
@@ -65,27 +65,27 @@ class HomeViewController: UIViewController {
 }
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: RecepieCell.indetifier, for: indexPath) as? RecepieCell else {
-            print("Cell could not be converted to RecepieCell")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: RecipieCell.indetifier, for: indexPath) as? RecipieCell else {
+            print("Cell could not be converted to RecipieCell")
             return UITableViewCell()
         }
-        let recipie = self.recepies[indexPath.row]
-        cell.recepieName.text = recipie.title
+        let recipie = self.recipies[indexPath.row]
+        cell.recipieName.text = recipie.title
         if let url = URL(string: recipie.image ?? "") {
             DispatchQueue.main.async {
-                cell.recepieImage.af.setImage(withURL: url)
+                cell.recipieImage.af.setImage(withURL: url)
             }
         } else {
             print(URLError.invalidURL)
         }
         if let dishTypes = recipie.dishTypes  {
-            cell.recepieType.text = dishTypes.first?.capitalized
+            cell.recipieType.text = dishTypes.first?.capitalized
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        recepies.count
+        recipies.count
     }
 }
 

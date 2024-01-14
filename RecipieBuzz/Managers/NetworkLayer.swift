@@ -17,7 +17,7 @@ class Network {
     
     var fetching = false
     
-    func getRandomRecepies(completion: @escaping (Result<Recipices, Error>) -> ())  -> () {
+    func getRandomRecipies(completion: @escaping (Result<Recipices, Error>) -> ())  -> () {
         // 'Result' is an Enum of Type <SuccessType, Error>
         // The type result escapes the function not the parameter name
         
@@ -34,8 +34,8 @@ class Network {
                     return
                 }
                 do {
-                    let recepies = try self.decoder.decode(Recipices.self, from: data)
-                    completion(.success(recepies))
+                    let recipies = try self.decoder.decode(Recipices.self, from: data)
+                    completion(.success(recipies))
                 }
                 catch {
                     completion(.failure(error))
@@ -74,8 +74,8 @@ class Network {
                     return
                 }
                 do {
-                    let recepies = try self.decoder.decode(RecipieInformation.self, from: data)
-                    completion(.success(recepies))
+                    let recipies = try self.decoder.decode(RecipieInformation.self, from: data)
+                    completion(.success(recipies))
                 }
                 catch {
                     completion(.failure(error))

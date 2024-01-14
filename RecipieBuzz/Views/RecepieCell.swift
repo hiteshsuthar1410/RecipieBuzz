@@ -1,5 +1,5 @@
 //
-//  RecepieCell.swift
+//  RecipieCell.swift
 //  RecipieBuzz
 //
 //  Created by Hitesh Suthar on 23/09/23.
@@ -7,16 +7,16 @@
 
 import UIKit
 
-class RecepieCell: UITableViewCell {
+class RecipieCell: UITableViewCell {
 
-    static let indetifier = "recepieCell"
+    static let indetifier = "recipieCell"
     
-    @IBOutlet weak var recepieImage: UIImageView!
-    @IBOutlet weak var recepieType: UILabel!
-    @IBOutlet weak var recepieName: UILabel!
+    @IBOutlet weak var recipieImage: UIImageView!
+    @IBOutlet weak var recipieType: UILabel!
+    @IBOutlet weak var recipieName: UILabel!
     
     override func prepareForReuse() {
-        recepieImage.image = UIImage(named: "recipieImagePlaceholder")
+        recipieImage.image = UIImage(named: "recipieImagePlaceholder")
     }
     
     override func awakeFromNib() {
