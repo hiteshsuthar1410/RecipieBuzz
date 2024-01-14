@@ -1,6 +1,6 @@
 //
 //  IB.swift
-//  RecepieApp
+//  RecipieBuzz
 //
 //  Created by Hitesh Suthar on 02/10/23.
 //

@@ -1,6 +1,6 @@
 //
 //  ProfileImageViewTableViewCell.swift
-//  RecepieApp
+//  RecipieBuzz
 //
 //  Created by Hitesh Suthar on 14/01/24.
 //

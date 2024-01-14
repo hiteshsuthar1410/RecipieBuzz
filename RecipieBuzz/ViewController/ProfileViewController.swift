@@ -1,6 +1,6 @@
 //
 //  ProfileViewController.swift
-//  RecepieApp
+//  RecipieBuzz
 //
 //  Created by Hitesh Suthar on 06/12/23.
 //
@@ -9,7 +9,7 @@ import UIKit
 
 class ProfileViewController: UITableViewController {
     
-    let settingsMenu = ["", "Saved", "Help and feedback", "Logout"]
+    let settingsMenu = ["", "", "Help and feedback", "Logout"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

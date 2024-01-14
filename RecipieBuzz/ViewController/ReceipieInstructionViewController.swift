@@ -1,6 +1,6 @@
 //
 //  ReceipieInstructionViewController.swift
-//  RecepieApp
+//  RecipieBuzz
 //
 //  Created by Hitesh Suthar on 07/10/23.
 //

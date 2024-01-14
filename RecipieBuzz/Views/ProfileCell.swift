@@ -1,6 +1,6 @@
 //
 //  ProfileCell.swift
-//  RecepieApp
+//  RecipieBuzz
 //
 //  Created by Hitesh Suthar on 06/12/23.
 //
