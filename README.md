@@ -7,6 +7,15 @@ Welcome to RecipieBuzz, your go-to app for exploring and saving delicious recipe
 |  Home                                       |  Recipe Overview                            |  Recipie Instructions                       |  Profile                                    |
 | ------------------------------------------- | ------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
 | ![HomeScreen](https://github.com/hiteshsuthar1410/RecipieBuzz/assets/80826512/dee84165-04bb-40aa-be41-1094780b9b13) | ![RecipieOverview](https://github.com/hiteshsuthar1410/RecipieBuzz/assets/80826512/1ab2705c-9334-456b-9e3e-fa4d3a826958) | ![RecipeInstructions](https://github.com/hiteshsuthar1410/RecipieBuzz/assets/80826512/ff9e8ae0-b6fe-42c5-bd8e-15a53fd73deb) | ![ProfileScreen](https://github.com/hiteshsuthar1410/RecipieBuzz/assets/80826512/be94be1f-9e42-4fd4-a7ed-5a1aebcefc76) |
+
+## Features that Buzz with Excitement
+
+- Step-by-Step Guidance:
+  Each recipe comes with clear instructions, guiding you seamlessly through the cooking process.
+- Ingredient Delight:
+  Dive into detailed ingredient lists, ensuring you have everything you need for a successful dish.
+- Save For Later:
+  Hit the "Heart" button to bookmark recipes for later, and share your newfound culinary treasures with friends and family.
   
 
 ## Installation
