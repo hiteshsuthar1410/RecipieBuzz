@@ -11,6 +11,7 @@ class RecipieInstructionCellTableViewCell: UITableViewCell {
     
     static let identifier = "recipieInstructionCellTableViewCell"
     
+    
     @IBOutlet weak var stepInstruction: UILabel!
     
     override func awakeFromNib() {
@@ -29,8 +30,8 @@ class RecipieInstructionCellTableViewCell: UITableViewCell {
             debugPrint(PropertyError.emptyProperty.localizedDescription)
             return
         }
-        DispatchQueue.main.async {
+//        DispatchQueue.main.async { // Removing this resolved the issue of truncating label text
             self.stepInstruction.text = step
-        }
+//        }
     }
 }

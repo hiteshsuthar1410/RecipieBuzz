@@ -18,7 +18,7 @@ class ReceipieInstructionViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.reloadData()
+//        tableView.reloadData()
         // Do any additional setup after loading the view.
     }
     

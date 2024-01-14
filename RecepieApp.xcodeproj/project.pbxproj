@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3801F34E2B39F68100258801 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3801F34D2B39F68100258801 /* LoginViewController.swift */; };
 		383BAE182ACDC5C700C55825 /* RecipieInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BAE172ACDC5C700C55825 /* RecipieInstruction.swift */; };
 		384014F32B20DDBB0087119B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384014F22B20DDBB0087119B /* ProfileViewController.swift */; };
 		384014F52B20DEBB0087119B /* ProfileOverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384014F42B20DEBB0087119B /* ProfileOverviewCell.swift */; };
@@ -23,6 +24,7 @@
 		387D60C82AC1F82700B1CC4C /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D60C72AC1F82700B1CC4C /* Error.swift */; };
 		3895EBCF2AC807D700DA2472 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3895EBCE2AC807D700DA2472 /* AlamofireImage */; };
 		38AC57932AC18F6D00BAE29F /* RecepieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AC57922AC18F6D00BAE29F /* RecepieViewController.swift */; };
+		38B6FE632B53E19900076D5B /* ProfileImageViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B6FE622B53E19900076D5B /* ProfileImageViewTableViewCell.swift */; };
 		38BE31C32ABEE80100FBEBDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE31C22ABEE80100FBEBDF /* AppDelegate.swift */; };
 		38BE31C52ABEE80100FBEBDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE31C42ABEE80100FBEBDF /* SceneDelegate.swift */; };
 		38BE31C72ABEE80100FBEBDF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE31C62ABEE80100FBEBDF /* HomeViewController.swift */; };
@@ -32,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3801F34D2B39F68100258801 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		383BAE172ACDC5C700C55825 /* RecipieInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipieInstruction.swift; sourceTree = "<group>"; };
 		384014F22B20DDBB0087119B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		384014F42B20DEBB0087119B /* ProfileOverviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOverviewCell.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		387D60C42AC1EFBC00B1CC4C /* Recepie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recepie.swift; sourceTree = "<group>"; };
 		387D60C72AC1F82700B1CC4C /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		38AC57922AC18F6D00BAE29F /* RecepieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepieViewController.swift; sourceTree = "<group>"; };
+		38B6FE622B53E19900076D5B /* ProfileImageViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageViewTableViewCell.swift; sourceTree = "<group>"; };
 		38BE31BF2ABEE80100FBEBDF /* RecepieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecepieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38BE31C22ABEE80100FBEBDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38BE31C42ABEE80100FBEBDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 				3847C6B82AD18ECF008E5C4F /* RecipieInstructionCellTableViewCell.swift */,
 				384014F42B20DEBB0087119B /* ProfileOverviewCell.swift */,
 				384014F62B20EC230087119B /* ProfileCell.swift */,
+				38B6FE622B53E19900076D5B /* ProfileImageViewTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 				384014F22B20DDBB0087119B /* ProfileViewController.swift */,
 				38AC57922AC18F6D00BAE29F /* RecepieViewController.swift */,
 				3847C6B62AD18C8C008E5C4F /* ReceipieInstructionViewController.swift */,
+				3801F34D2B39F68100258801 /* LoginViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -232,10 +238,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3801F34E2B39F68100258801 /* LoginViewController.swift in Sources */,
 				384014F72B20EC230087119B /* ProfileCell.swift in Sources */,
 				387D60C82AC1F82700B1CC4C /* Error.swift in Sources */,
 				387D60C22AC1EEBF00B1CC4C /* NetworkLayer.swift in Sources */,
 				387D60C52AC1EFBC00B1CC4C /* Recepie.swift in Sources */,
+				38B6FE632B53E19900076D5B /* ProfileImageViewTableViewCell.swift in Sources */,
 				3847C6B72AD18C8C008E5C4F /* ReceipieInstructionViewController.swift in Sources */,
 				3865D01D2AC34D1B00F6FB5D /* RecipieInformation.swift in Sources */,
 				38AC57932AC18F6D00BAE29F /* RecepieViewController.swift in Sources */,

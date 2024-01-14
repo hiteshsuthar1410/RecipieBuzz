@@ -15,6 +15,10 @@ class RecepieCell: UITableViewCell {
     @IBOutlet weak var recepieType: UILabel!
     @IBOutlet weak var recepieName: UILabel!
     
+    override func prepareForReuse() {
+        recepieImage.image = UIImage(named: "recipieImagePlaceholder")
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

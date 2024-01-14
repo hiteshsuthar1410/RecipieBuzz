@@ -36,22 +36,58 @@ class ProfileViewController: UITableViewController {
     }
 
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 100
+        } else {
+            return tableView.rowHeight
+        }
+        
+        
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (indexPath.row == 0) {
+        switch indexPath.row {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileImageViewTableViewCell.identifier, for: indexPath) as? ProfileImageViewTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.configure(with: UIImage(named: "samplePersonImage"))
+            return cell
+            
+        case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileOverviewCell.identifier, for: indexPath) as? ProfileOverviewCell else {
                 debugPrint(CastingError.itemORCellCasting)
                 return UITableViewCell()
             }
-            cell.configure()
+            cell.configure(name: "John Doe", emailAddress: "johndoe@email.com")
             return cell
-        } else {
+        
+        default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCell.identifier, for: indexPath) as? ProfileCell else {
                 debugPrint(CastingError.itemORCellCasting)
                 return UITableViewCell()
             }
             cell.configure(cellTitle: settingsMenu[indexPath.row])
             return cell
+            
         }
+        
+//        if (indexPath.row == 0) {
+//            guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileOverviewCell.identifier, for: indexPath) as? ProfileOverviewCell else {
+//                debugPrint(CastingError.itemORCellCasting)
+//                return UITableViewCell()
+//            }
+//            cell.configure(name: "Hitesh", emailAddress: "hiteshsuthar1410@gmail.com")
+//            return cell
+//        } else {
+//            guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCell.identifier, for: indexPath) as? ProfileCell else {
+//                debugPrint(CastingError.itemORCellCasting)
+//                return UITableViewCell()
+//            }
+//            cell.configure(cellTitle: settingsMenu[indexPath.row])
+//            return cell
+//        }
     }
     
 
